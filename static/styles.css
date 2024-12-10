@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom right, #007bff, #00c1d4);
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+  border-bottom: 4px solid #007bff;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+section {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  animation: fadeIn 1s ease-in-out;
+}
+
+section:nth-child(even) {
+  background: #fff;
+}
+
+h2 {
+  font-size: 24px;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input Field */
+input {
+  width: calc(100% - 30px);
+  padding: 15px;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}

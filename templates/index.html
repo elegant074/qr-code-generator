@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/static/favicon.png" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-black to-gray-900 text-gray-300 font-sans flex flex-col items-center min-h-screen"
+  >
+    <!-- Navigation Bar -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-lg z-50"
+    >
+      <div
+        class="container mx-auto flex justify-between items-center py-4 px-6"
+      >
+        <a href="#" class="text-xl font-bold">QR Generator</a>
+        <div class="space-x-4">
+          <a href="#about" class="hover:text-blue-500">About</a>
+          <a href="#qr-info" class="hover:text-blue-500">What to Know</a>
+          <a href="#examples" class="hover:text-blue-500">Examples</a>
+          <a href="#contact" class="hover:text-blue-500">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-gray-900 shadow-md w-full text-center py-24 mt-16">
+      <div class="container mx-auto">
+        <h1 class="text-5xl font-bold text-white mb-4">QR Code Generator</h1>
+        <p class="text-lg text-gray-400">
+          Easily create customized QR codes for any purpose.
+        </p>
+      </div>
+    </header>
+
+    <!-- QR Code Generator Section -->
+    <section class="flex flex-col items-center mt-10">
+      <input
+        type="text"
+        id="qrText"
+        placeholder="Enter text or URL"
+        class="border border-gray-700 bg-gray-800 text-gray-300 p-4 rounded-lg w-96 text-center focus:ring-2 focus:ring-blue-500 mb-4"
+      />
+      <button
+        id="generateBtn"
+        class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+      >
+        Generate QR Code
+      </button>
+      <div id="qrResult" class="mt-10"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-800 w-full py-20 text-center">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-white mb-6">About</h2>
+        <p class="text-lg text-gray-400">
+          Our QR Code Generator helps you create QR codes for business,
+          personal, or any other purpose. Easily customize your QR codes with
+          colors, sizes, and logos. It's fast, reliable, and secure.
+        </p>
+      </div>
+    </section>
+
+    <!-- What You Should Know About QR Codes Section -->
+    <section id="qr-info" class="bg-gray-900 w-full py-20 text-center">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-white mb-6">
+          What You Should Know About QR Codes
+        </h2>
+        <p class="text-lg text-gray-400 mb-6">
+          QR (Quick Response) Codes are two-dimensional barcodes that can store
+          a variety of information like URLs, contact details, or Wi-Fi
+          credentials. They are widely used in business, marketing, and daily
+          life due to their convenience.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- How QR Codes Work -->
+          <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-bold text-white mb-4">
+              How Do QR Codes Work?
+            </h3>
+            <p class="text-gray-400">
+              QR codes encode data into black and white squares. When scanned
+              using a smartphone or QR code scanner, the data is decoded into
+              actionable information, such as a URL or contact card.
+            </p>
+          </div>
+          <!-- Why Use QR Codes -->
+          <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-bold text-white mb-4">
+              Why Should I Use QR Codes?
+            </h3>
+            <p class="text-gray-400">
+              QR codes are fast, reliable, and versatile. They are commonly used
+              for sharing links, promotions, event details, or even connecting
+              to Wi-Fi. They are a paperless and eco-friendly solution for
+              sharing information.
+            </p>
+          </div>
+          <!-- How to Scan QR Codes -->
+          <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-bold text-white mb-4">
+              How Do I Scan a QR Code?
+            </h3>
+            <p class="text-gray-400">
+              Most smartphones have a built-in QR code scanner in the camera
+              app. Open your camera, point it at the QR code, and follow the
+              link or action that appears. You can also download QR code scanner
+              apps for older devices.
+            </p>
+          </div>
+        </div>
+        <p class="text-lg text-gray-400 mt-8">
+          <strong>Tip:</strong> Always verify the source of the QR code before
+          scanning, especially if it's from an unfamiliar or suspicious source.
+        </p>
+      </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="bg-gray-800 w-full py-20 text-center">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-white mb-6">Examples</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex flex-col items-center">
+            <img
+              src="/static/example1.png"
+              alt="QR Code Example 1"
+              class="w-48 rounded-lg shadow-lg"
+            />
+            <p class="text-lg text-gray-400 mt-4">
+              Example 1: Link to a website
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img
+              src="/static/example2.png"
+              alt="QR Code Example 2"
+              class="w-48 rounded-lg shadow-lg"
+            />
+            <p class="text-lg text-gray-400 mt-4">
+              Example 2: Link to a website
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-900 w-full py-20 text-center">
+      <div class="container mx-auto">
+        <h2 class="text-4xl font-bold text-white mb-6">Contact Us</h2>
+        <form id="contactForm" class="space-y-6 max-w-md mx-auto">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            class="w-full border border-gray-700 bg-gray-800 text-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            class="w-full border border-gray-700 bg-gray-800 text-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="4"
+            required
+            class="w-full border border-gray-700 bg-gray-800 text-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 w-full py-6 text-center text-gray-400">
+      <p>&copy; 2024 QR Code Generator. All rights reserved.</p>
+    </footer>
+
+    <!-- Back-to-Top Button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition"
+    >
+      ↑
+    </button>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
